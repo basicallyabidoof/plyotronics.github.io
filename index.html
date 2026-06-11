@@ -260,6 +260,7 @@
           </div>
 
           <!-- Static contact form — action can be wired up via Formspree/Netlify/etc. -->
+          <!-- TODO: replace the action URL below with your real form endpoint before going live -->
           <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST" novalidate>
             <h3>Send a message</h3>
             <div class="form-row">
@@ -356,11 +357,9 @@
     (function () {
       var form = document.querySelector('.contact-form');
       if (!form) return;
-      form.addEventListener('submit', function (e) {
-        // If using a real form backend (Formspree etc.) remove the preventDefault
-        // below and configure the action URL.  Left here for demo purposes.
-        // e.preventDefault();
-        // showSuccess();
+      form.addEventListener('submit', function () {
+        // Form submits to the configured action URL (Formspree, Netlify Forms, etc.)
+        // No client-side interception needed — update the action attribute to activate.
       });
     }());
   </script>
