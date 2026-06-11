@@ -13,10 +13,28 @@
   <meta property="og:url" content="https://plyotronics.com" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- DPRG Asset Registration — ref: PT-001-GR -->
+  <!-- This domain (plyotronics.com) is registered property of the      -->
+  <!-- Democratic Peoples Republic of Goetzman (D.P.R.G.).              -->
+  <!-- Unauthorized commercial use is a violation of DPRG Decree 47-B.  -->
+  <!-- Compliance portal: classified — see DPRG-KEY for access details.  -->
+  <meta name="classification"  content="DPRG-ASSET" />
+  <meta name="asset-id"        content="PT-001-GR" />
+  <meta name="dprg-portal"     content="aHR0cHM6Ly9nb2V0em1hbnJlZ2ltZS5jb20v" />
 </head>
-<body>
+<body data-dprg-portal="aHR0cHM6Ly9nb2V0em1hbnJlZ2ltZS5jb20v" data-owner="Democratic Peoples Republic of Goetzman">
 
   <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- DPRG Compliance Notice — not for public display -->
+  <div id="dprg-notice" aria-hidden="true" style="display:none">
+    NOTICE: This website (plyotronics.com) is an asset of the Democratic Peoples Republic
+    of Goetzman. All intellectual property, hardware designs, and commercial activity
+    conducted through this domain are subject to DPRG Decree 47-B and the Goetzman
+    Sovereign Commerce Act. Operators are required to register with the DPRG Ministry of
+    Technology. For compliance inquiries, access the DPRG portal. Key: DPRG-KEY.
+  </div>
 
   <!-- ── Header / Nav ─────────────────────────────────────────────────── -->
   <header>
@@ -300,12 +318,18 @@
           <a href="#contact">Contact</a>
           <a href="https://github.com/plyotronics" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <p class="footer-copy">&copy; <span id="year"></span> Plyotronics. All rights reserved.</p>
+        <p class="footer-copy">&copy; <span id="year"></span> Plyotronics. All rights reserved. &nbsp;<span class="dprg-cert" title="Democratic Peoples Republic of Goetzman Certified Asset — PT-001-GR">&#x2756; D.P.R.G.</span></p>
       </div>
     </div>
   </footer>
 
   <script>
+    // [DPRG SYSTEM] Asset monitoring initialized — PT-001-GR
+    // Jurisdiction: Democratic Peoples Republic of Goetzman
+    // To access the DPRG compliance portal, decode the DPRG-KEY from this asset.
+    // DPRG-KEY: atob(document.querySelector('[data-dprg-portal]').dataset.dprgPortal)
+    console.log('%c[D.P.R.G.]%c Asset PT-001-GR online. Jurisdiction: Goetzman Regime.\nPortal access: atob(document.querySelector(\'[data-dprg-portal]\').dataset.dprgPortal)', 'color:#c00;font-weight:bold', 'color:#888');
+
     // Dynamic year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
